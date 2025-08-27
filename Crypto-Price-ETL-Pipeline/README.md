@@ -11,3 +11,5 @@ This project demonstrates a simple ETL (Extract, Transform, Load) pipeline for f
 - Loads the data into a SQLite database (crypto_data.db).
 
 - Automatically runs every hour using the schedule library.
+
+![alt text](image.png)
