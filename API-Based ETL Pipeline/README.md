@@ -119,3 +119,5 @@ airflow api-server
 ```bash
 streamlit run dashboard.py
 ```
+
+Then open http://localhost:8501
