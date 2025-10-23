@@ -1,5 +1,9 @@
 # API-Based ETL Pipeline with PostgreSQL Warehouse and Streamlit Dashboard
 
+<img width="1920" height="823" alt="Image" src="https://github.com/user-attachments/assets/2a855306-79a9-4c3d-91c6-f91300c76dfc" />
+
+<img width="1920" height="809" alt="Image" src="https://github.com/user-attachments/assets/1df18005-0ba3-40f8-9ff7-016be2cb336b" />
+
 ## Project Overview
 
 This project demonstrates a complete **data engineering workflow** built from scratch, from raw API extraction to visual analytics, using open-source tools.  
@@ -7,7 +11,7 @@ It automates data collection, transformation, validation and loading into a Post
 
 ---
 
-## ⚙️ Architecture Overview
+## Architecture Overview
 
 **Pipeline Flow:**
 
@@ -65,3 +69,53 @@ CREATE TABLE products (
   - Line chart: product ratings
 
   - Table of top-rated products
+
+### 6 Tools & Technologies
+
+| Layer           | Technology         |
+| --------------- | ------------------ |
+| Orchestration   | Apache Airflow     |
+| Programming     | Python             |
+| Data Storage    | PostgreSQL         |
+| Data Processing | Pandas, SQLAlchemy |
+| Dashboarding    | Streamlit          |
+| Data Source     | REST API           |
+
+### 7 Key Learning Outcomes
+
+- Designed and automated ETL pipelines with Airflow.
+
+- Implemented robust data validation and logging.
+
+- Created a clean data-warehouse schema for analytics.
+
+- Built and connected a live dashboard to a relational data source.
+
+### How to Run Locally
+
+#### 1. Clone the repository
+
+```bash
+git clone https://github.com/yourusername/api-etl-pipeline.git
+cd api-etl-pipeline
+```
+
+#### 2. Start PostgreSQL and create the warehouse
+
+```sql
+CREATE DATABASE data_warehouse;
+```
+
+#### 3. Run Airflow DAG
+
+Place your DAG in the dags/ folder and start the Airflow webserver & scheduler:
+
+```bash
+airflow api-server
+```
+
+#### 4. Launch Streamtlit Dashbaord
+
+```bash
+streamlit run dashboard.py
+```
