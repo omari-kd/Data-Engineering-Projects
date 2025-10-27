@@ -1,5 +1,7 @@
 # API-Based ETL Pipeline with PostgreSQL Warehouse and Streamlit Dashboard
 
+App is available at https://omari-apibasedetlpipeline.streamlit.app/
+
 <img width="1920" height="823" alt="Image" src="https://github.com/user-attachments/assets/2a855306-79a9-4c3d-91c6-f91300c76dfc" />
 
 <img width="1920" height="809" alt="Image" src="https://github.com/user-attachments/assets/1df18005-0ba3-40f8-9ff7-016be2cb336b" />
