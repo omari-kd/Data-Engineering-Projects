@@ -1,6 +1,9 @@
 pandas 
 requests
 sqlalchemy
-time
+#time
 schedule
-sqlite3
+# sqlite3
+# apache-airflow
+pyyaml
+psycopg2-binary

@@ -3,45 +3,20 @@ import pandas as pd
 import psycopg2
 
 # PostgreSQL Connection details
-# try:
-#     conn = psycopg2.connect(**st.secrets["postgres"])
-# except Exception as e:
-#     st.error(f"Connection failed: {e}")
-#     st.stop()
-# try:
-#     conn = psycopg2.connect(
-#         host=st.secrets["postgres"]["host"],
-#         database=st.secrets["postgres"]["database"],
-#         user=st.secrets["postgres"]["user"],
-#         password=st.secrets["postgres"]["password"],
-#         port=st.secrets["postgres"]["port"],
-#         sslmode=st.secrets["postgres"]["sslmode"]
-#     )
-#     st.success("Connected to Neon PostgreSQL successfully!")
-# except Exception as e:
-#     st.error(f"Connection failed: {e}")
-#     st.stop()
+conn = psycopg2.connect (
+    host='localhost',
+    database='etl_demo',
+    user='postgres',
+    password='ben/junior'
+)
 
-#  st.write(st.secrets)
-
-# conn = psycopg2.connect(**st.secrets["postgres"])
-conn = psycopg2.connect(**st.secrets["postgres"])
-cur = conn.cursor()
-
-# Set search_path to warehouse so you don't need to prefix tables
-cur.execute('SET search_path TO warehouse;')
-conn.commit()
 
 st.set_page_config(page_title="Data Warehouse Dashboard", layout="wide")
 st.title('ETL Data Warehouse Dashboard')
 
 # --- Load data from warehouse ---
 # Query data from fact_sales table (or whatever you have)
-cur.execute("SELECT table_schema, table_name FROM information_schema.tables;")
-# tables = cur.fetchall()
-# st.write("Available tables:", tables)
-
-query = query = "SELECT * FROM public.products;"
+query = "SELECT * FROM products;"
 df = pd.read_sql(query, conn)
 
 st.subheader("Sales Data Preview")

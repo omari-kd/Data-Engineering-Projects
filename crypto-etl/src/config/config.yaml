@@ -1,0 +1,9 @@
+api_url : "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum&vs_currencies=usd&include_market_cap=true"
+
+database:
+    host: "ep-falling-leaf-ah0t38fa-pooler.c-3.us-east-1.aws.neon.tech"
+    port: 5432
+    dbname: "crypto_db"
+    user: "neondb_owner"
+    password: "npg_s6MuvfLySDN9"
+    sslmode: "require"

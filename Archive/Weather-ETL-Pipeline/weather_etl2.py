@@ -45,4 +45,4 @@ print("Sample data:\n", final_df.head())
 engine = create_engine("sqlite:///weather.db")
 final_df.to_sql("hourly_weather", engine, if_exists="replace", index=False)
 
-print("ETL complete! Data saved into weather.db")
+print("✅ ETL complete! Data saved into weather.db")
